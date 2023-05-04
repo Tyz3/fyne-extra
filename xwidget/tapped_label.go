@@ -32,6 +32,10 @@ func (w *TappedLabel) SetStyle(style fyne.TextStyle) {
 	w.label.TextStyle = style
 }
 
+func (w *TappedLabel) SetAlignment(align fyne.TextAlign) {
+	w.label.Alignment = align
+}
+
 func (w *TappedLabel) Tapped(event *fyne.PointEvent) {
 	if w.OnLeftClick != nil {
 		w.OnLeftClick(event)

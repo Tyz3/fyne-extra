@@ -92,6 +92,9 @@ func (w *PagedList) GetPages() int {
 	if len(w.filteredEntries)%w.pageSize != 0 {
 		pages++
 	}
+	if pages == 0 {
+		pages++
+	}
 	return pages
 }
 
