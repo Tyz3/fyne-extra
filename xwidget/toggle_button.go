@@ -115,6 +115,9 @@ func (w *ToggleButton) ToggleOffState() {
 	a1.Start()
 	a2.Start()
 	a3.Start()
+	if w.OnStateChanged != nil {
+		w.OnStateChanged(w.state)
+	}
 }
 
 func (w *ToggleButton) ToggleInactiveState() {
@@ -149,6 +152,9 @@ func (w *ToggleButton) ToggleInactiveState() {
 	a1.Start()
 	a2.Start()
 	a3.Start()
+	if w.OnStateChanged != nil {
+		w.OnStateChanged(w.state)
+	}
 }
 
 func (w *ToggleButton) ToggleOnState() {
@@ -183,7 +189,9 @@ func (w *ToggleButton) ToggleOnState() {
 	a1.Start()
 	a2.Start()
 	a3.Start()
-
+	if w.OnStateChanged != nil {
+		w.OnStateChanged(w.state)
+	}
 }
 
 func (w *ToggleButton) CreateRenderer() fyne.WidgetRenderer {
